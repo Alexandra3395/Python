@@ -1,27 +1,9 @@
-'''import turtle
 
-turtle.shape('turtle')
-NOL = [100, 200, 100, 200]
-ODIN = [150,200]
-turtle.penup()
-turtle.goto(-400,0)
-for i in range(len(NOL)):
-    turtle.pendown()
-    turtle.forward(NOL[i])
-    turtle.left(90)
-
-turtle.penup()
-turtle.goto(-250,100)
-turtle.pendown()
-turtle.left(45)
-turtle.forward(ODIN[0])
-turtle.right(135)
-turtle.forward(ODIN[1])'''
 from random import randint
 import turtle
 
 
-number_of_turtles = 5
+number_of_turtles = 7
 steps_of_time_number = 100
 
 
@@ -35,4 +17,16 @@ for unit in pool:
 for i in range(steps_of_time_number):
     for unit in pool:
         unit.forward(2)
+        
+for count_square in range(15):
+    size = 100 - count_square*5
+    for j in range(4):
+        turtle.pendown()
+        turtle.forward(size)
+        turtle.right(90)
+    turtle.penup()
+    turtle.forward(3)
+    turtle.right(90)
+    turtle.forward(3)
+    turtle.left(90)
 input()
